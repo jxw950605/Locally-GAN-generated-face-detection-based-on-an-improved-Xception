@@ -14,7 +14,7 @@ It has become a research hotspot to detect whether a face is natural or GAN-gene
 
 
 # The construction of the LGGF dataset
-The binary ground truth masks with different sizes are created by Matlab. Six different sizes are considered with the ratio of the whole image from 0.5% and 5.5% every 1.0% (25×25,32×32,40×40,48×48,56×56,64×64). These masks appear at arbitrary positions in the natural images. Then, the FFHQ dataset is combined with these two types and six different sizes of masks, obtaining twelve incomplete image datasets. The iregular mask for the LGGF dataset is under the path of the dataset folder. The regular mask can be obtained by the function 'get_regular_mask.py'. In the samples, samples_mask,and samples_results floders, we provide some samples.Finally, the pluralistic model[1] is utilized to restore the incomplete region of each image in the twelve incomplete region image datasets. The architecture of the construction is shown in 'construction_of_dataset.png'.
+The binary ground truth masks with different sizes are created by Matlab. Six different sizes are considered with the ratio of the whole image from 0.5% and 5.5% every 1.0% (25×25,32×32,40×40,48×48,56×56,64×64). These masks appear at arbitrary positions in the natural images. Then, the FFHQ dataset is combined with these two types and six different sizes of masks, obtaining twelve incomplete image datasets. The iregular mask for the LGGF dataset is under the path of the 'dataset' folder. The regular mask can be obtained by the function 'get_regular_mask.py'. In the samples, samples_mask,and samples_results floders, we provide some samples.Finally, the pluralistic model[1] is utilized to restore the incomplete region of each image in the twelve incomplete region image datasets. The architecture of the construction is shown in 'construction_of_dataset.png'.
 
 
 
@@ -28,7 +28,7 @@ The binary ground truth masks with different sizes are created by Matlab. Six di
 
 
 - The other two inpaininting method: 
-[DFNET inpainting](https://github.com/hughplay/DFNet.git) [2] and   [Generative inpainting](https://github.com/hughplay/DFNet.git)[3]<br>
+[DFNET inpainting](https://github.com/hughplay/DFNet.git) [2] and  [Generative inpainting](https://github.com/hughplay/DFNet.git)[3]<br>
 
 # Setup training and testing
 
