@@ -5,7 +5,7 @@ In this paper, we improve the existing  deep neural network (Xception)  for the 
 
 
 
-<td><img src='architecture.png'></td>
+<td><img src='https://github.com/jxw950605/Locally-GAN-generated-face-detection-based-on-an-improved-Xception/blob/main/architecture.png'></td>
 
 # Prerequisites
 
