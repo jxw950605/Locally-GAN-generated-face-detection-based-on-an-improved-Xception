@@ -1,11 +1,10 @@
 # Locally GAN-generated face detection based on an improved Xception
 ##
-# Overview of the architecture
-In this paper, we improve the existing  deep neural network (Xception)  for the locally GAN-generated face detection.The locally GAN-based generated face (LGGF) dataset is constructed by the pluralistic image completion method on the basis of [FFHQ](https://github.com/tkarras/progressive_growing_of_gans) dataset. To the best of our knowledge, our work is the first one to address the locally GAN-generated face detection. Some improvements are as follows: (1) Four residual blocks are removed to avoid the overfitting problem as much as possible for the locally GAN-generated face issue; (2) Inception block with the dilated convolution is used to replace the common convolution layer in the pre-processing module of the Xception to obtain multi-scale features; (3) Feature pyramid network is utilized to obtain multi-level features for final decision.
+# Overview
+In this paper, we improve the existing  deep neural network (Xception)  for the locally GAN-generated face detection.The locally GAN-based generated face (LGGF) dataset is constructed by the pluralistic image completion method on the basis of [FFHQ](https://github.com/tkarras/progressive_growing_of_gans) dataset. To the best of our knowledge, our work is the first one to address the locally GAN-generated face detection. Some improvements are as follows: (1) Four residual blocks are removed to avoid the overfitting problem as much as possible for the locally GAN-generated face issue; (2) Inception block with the dilated convolution is used to replace the common convolution layer in the pre-processing module of the Xception to obtain multi-scale features; (3) Feature pyramid network is utilized to obtain multi-level features for final decision. The architecture isshow in architecture.png
 
 
 
-<td><img src='https://github.com/jxw950605/Locally-GAN-generated-face-detection-based-on-an-improved-Xception/blob/main/architecture.png'></td>
 
 # Prerequisites
 
@@ -16,30 +15,8 @@ In this paper, we improve the existing  deep neural network (Xception)  for the 
 
 
 # The construction of the LGGF dataset
-The binary ground truth masks with different sizes are created by Matlab. Six different sizes are considered with the ratio of the whole image from 0.5% and 5.5% every 1.0% (25×25,32×32,40×40,48×48,56×56,64×64). The iriregular mask for the LGGF dataset is under the path of the dataset folder. the regular mask can be obtained by the function 'get_regular_mask.py'
-<td><img src='construction_of_dataset.png'></td>
+The binary ground truth masks with different sizes are created by Matlab. Six different sizes are considered with the ratio of the whole image from 0.5% and 5.5% every 1.0% (25×25,32×32,40×40,48×48,56×56,64×64). The iriregular mask for the LGGF dataset is under the path of the dataset folder. the regular mask can be obtained by the function 'get_regular_mask.py' In the samples, samples_mask,samples_results, we provided some examples.
 
-# Example images
-<table>
-<tr>
-<td><img src='samples/samples1.png'></td>
-<td><img src='samples_mask/samples1.png'></td>
-<td><img src='samples_results/samples1.png'></td>
-<td><img src='samples/samples2.png'></td>
-<td><img src='samples_mask/samples2.png'></td>
-<td><img src='samples_results/samples2.png'></td>
-</tr>
-
-<tr>
-<td><img src='samples/samples3.png'></td>
-<td><img src='samples_mask/samples3.png'></td>
-<td><img src='samples_results/samples3.png'></td>
-<td><img src='samples/samples4.png'></td>
-<td><img src='samples_mask/samples4.png'></td>
-<td><img src='samples_results/samples4.png'></td>
-</tr>
-
-</table>
 
 
 # The inpainting methods used in the paper
