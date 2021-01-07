@@ -15,7 +15,7 @@ In this paper, we improve the existing  deep neural network (Xception)  for the 
 
 
 # The construction of the LGGF dataset
-The binary ground truth masks with different sizes are created by Matlab. Six different sizes are considered with the ratio of the whole image from 0.5% and 5.5% every 1.0% (25×25,32×32,40×40,48×48,56×56,64×64). The iriregular mask for the LGGF dataset is under the path of the dataset folder. the regular mask can be obtained by the function 'get_regular_mask.py'. In the samples, samples_mask,and samples_results floders, we provide some samples.
+The binary ground truth masks with different sizes are created by Matlab. Six different sizes are considered with the ratio of the whole image from 0.5% and 5.5% every 1.0% (25×25,32×32,40×40,48×48,56×56,64×64). The iriregular mask for the LGGF dataset is under the path of the dataset folder. the regular mask can be obtained by the function 'get_regular_mask.py'. In the samples, samples_mask,and samples_results floders, we provide some samples. The architecture of the construction is show in 'construction_of_dataset.png'
 
 
 
