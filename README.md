@@ -15,11 +15,11 @@ In this paper, we improve the existing  deep neural network (Xception)  for the 
 - Install TensorFlow 1.12.0, keras 2.2.1 and dependencies
 
 
-#The construction of the LGGF dataset
+# The construction of the LGGF dataset
 The binary ground truth masks with different sizes are created by Matlab. Six different sizes are considered with the ratio of the whole image from 0.5% and 5.5% every 1.0% (25×25,32×32,40×40,48×48,56×56,64×64). The iriregular mask for the LGGF dataset is under the path of the dataset folder. the regular mask can be obtained by the function 'get_regular_mask.py'
 <td><img src='construction_of_dataset.png'></td>
 
-#Example images
+# Example images
 <table>
 <tr>
 <td><img src='samples/samples1.png'></td>
@@ -42,7 +42,7 @@ The binary ground truth masks with different sizes are created by Matlab. Six di
 </table>
 
 
-#The inpainting methods used in the paper
+# The inpainting methods used in the paper
 
 
 - The main inpainting method:   [Pluralistic Image Completion](https://github.com/lyndonzheng/Pluralistic)[1]<br><br>
@@ -54,7 +54,7 @@ The binary ground truth masks with different sizes are created by Matlab. Six di
 - The other two inpaininting method: 
 [DFNET inpainting](https://github.com/hughplay/DFNet.git) [2] and   [Generative inpainting](https://github.com/hughplay/DFNet.git)[3]<br>
 
-#Setup training and testing
+# Setup training and testing
 
 
 - Train：The regular sub-dataset randomly selects 70,000 images with the regular rectangular generated regions from the LGGF dataset, while the irregular sub-dataset randomly selects 70,000 images with the irregular generated regions. the original FFHQ dataset and two sub-datasets (regular sub-dataset and irregular one) are divided into training, validation, and testing sets with the ratio 5:1:4.
@@ -62,7 +62,7 @@ we use the adam optimization with the initial learning rate 1.0e-3 decay 0.00000
 
 - Test:To test the generalization ability of our algorithm, two sub testing datasets with the other two inpaininting method are considered to evaluate the performance of the trained model.
 
-#Related Works
+# Related Works
 [1][Zheng C, Cham T J, Cai J, Pluralistic image completion, in: Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR2019), 2019, pp. 1438-1447.](https://openaccess.thecvf.com/content_CVPR_2019/html/Zheng_Pluralistic_Image_Completion_CVPR_2019_paper.html)<br>
 [2][Hong X, Xiong P, Ji R, Deep fusion network for image completion, in: Proceedings of the 27th ACM International Conference on Multimedia (MM2019), 2019, pp. 2033-2042.](https://dl.acm.org/doi/abs/10.1145/3343031.3351002)<br>
 [3][Yu J, Lin Z, Yang J, Free-form image inpainting with gated convolution, in: Proceedings of the 2019 IEEE International Conference on Computer Vision (CVPR2019), 2019, pp. 4471-4480.](https://openaccess.thecvf.com/content_ICCV_2019/html/Yu_Free-Form_Image_Inpainting_With_Gated_Convolution_ICCV_2019_paper.html)
