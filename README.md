@@ -1,9 +1,9 @@
-# Locally GAN-generated face detection based on an improved Xception
+# [Locally GAN-generated face detection based on an improved Xception](https://www.sciencedirect.com/science/article/abs/pii/S0020025521004527)
 ##
 # Overview
 It has become a research hotspot to detect whether a face is natural or GAN-generated. However, all the existing works focus on whole GAN-generated faces. So, an improved Xception model is proposed for locally GAN-generated face detection. To the best of our knowledge, our work is the first one to address this issue. Some improvements over Xception are as follows: (1) Four residual blocks are removed to avoid the overfitting problem as much as possible for the locally generated face detection; (2) Inception block with the dilated convolution is used to replace the common convolution layer in the pre-processing module of the Xception to obtain multi-scale features; (3) Feature pyramid network is utilized to obtain multi-level features for final decision. The first locally GAN-based generated face (LGGF) dataset is constructed by the pluralistic image completion method on the basis of [FFHQ](https://github.com/tkarras/progressive_growing_of_gans) dataset. It has a total 952,000 images with the generated regions in different shapes and sizes. The architecture is show in 'architecture.png'.
 
-
+##Please quote our paper:Chen B, Ju X, Xiao B, et al. Locally GAN-generated face detection based on an improved Xception[J]. Information Sciences, 2021.
 
 # Prerequisites
 
